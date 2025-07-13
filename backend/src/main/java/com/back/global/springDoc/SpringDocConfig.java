@@ -16,7 +16,6 @@ import org.springframework.context.annotation.Configuration;
         bearerFormat = "JWT",
         scheme = "bearer"
 )
-
 public class SpringDocConfig {
     @Bean
     public GroupedOpenApi groupApiV1() {
