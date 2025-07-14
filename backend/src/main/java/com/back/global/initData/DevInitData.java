@@ -17,14 +17,16 @@ public class DevInitData {
     ApplicationRunner devInitDataApplicationRunner() {
         return args -> {
             try {
+                boolean isWindows = System.getProperty("os.name").toLowerCase().contains("win");
+
                 // 실행할 명령어 설정
                 ProcessBuilder builder = new ProcessBuilder(
-                        "npx.cmd",                         // 윈도우에서는 .cmd 명시
-                        "--package", "typescript",         // 타입스크립트 패키지
-                        "--package", "openapi-typescript", // openapi-typescript 패키지
-                        "openapi-typescript",              // 실제 실행할 명령어
-                        "http://localhost:8080/v3/api-docs/apiV1", // OpenAPI 문서 URL
-                        "-o", "../frontend/src/lib/backend/apiV1/schema.d.ts" // 출력 파일 경로
+                        "npx" + (isWindows ? ".cmd" : ""),           // 윈도우에서는 .cmd 명시
+                        "--package", "typescript",                              // 타입스크립트 패키지
+                        "--package", "openapi-typescript",                      // openapi-typescript 패키지
+                        "openapi-typescript",                                   // 실제 실행할 명령어
+                        "http://localhost:8080/v3/api-docs/apiV1",              // OpenAPI 문서 URL
+                        "-o", "../frontend/src/lib/backend/apiV1/schema.d.ts"   // 출력 파일 경로
                 );
 
                 // 에러 스트림도 출력 스트림과 함께 병합
