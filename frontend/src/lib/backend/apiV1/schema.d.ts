@@ -219,15 +219,15 @@ export interface components {
         };
         PostDto: {
             /** Format: int32 */
-            id?: number;
+            id: number;
             /** Format: date-time */
-            createDate?: string;
+            createDate: string;
             /** Format: date-time */
-            modifyDate?: string;
+            modifyDate: string;
             /** Format: int32 */
-            authorId?: number;
-            authorName?: string;
-            title?: string;
+            authorId: number;
+            authorName: string;
+            title: string;
         };
         RsDataPostDto: {
             resultCode?: string;
@@ -239,17 +239,17 @@ export interface components {
         };
         PostCommentDto: {
             /** Format: int32 */
-            id?: number;
+            id: number;
             /** Format: date-time */
-            createDate?: string;
+            createDate: string;
             /** Format: date-time */
-            modifyDate?: string;
+            modifyDate: string;
             /** Format: int32 */
-            authorId?: number;
-            authorName?: string;
+            authorId: number;
+            authorName: string;
             /** Format: int32 */
-            postId?: number;
-            content?: string;
+            postId: number;
+            content: string;
         };
         RsDataPostCommentDto: {
             resultCode?: string;
@@ -263,12 +263,12 @@ export interface components {
         };
         MemberDto: {
             /** Format: int32 */
-            id?: number;
+            id: number;
             /** Format: date-time */
-            createDate?: string;
+            createDate: string;
             /** Format: date-time */
-            modifyDate?: string;
-            name?: string;
+            modifyDate: string;
+            name: string;
         };
         RsDataMemberDto: {
             resultCode?: string;
@@ -291,26 +291,26 @@ export interface components {
         };
         PostWithContentDto: {
             /** Format: int32 */
-            id?: number;
+            id: number;
             /** Format: date-time */
-            createDate?: string;
+            createDate: string;
             /** Format: date-time */
-            modifyDate?: string;
+            modifyDate: string;
             /** Format: int32 */
-            authorId?: number;
-            authorName?: string;
-            title?: string;
-            content?: string;
+            authorId: number;
+            authorName: string;
+            title: string;
+            content: string;
         };
         MemberWithUsernameDto: {
             /** Format: int32 */
-            id?: number;
+            id: number;
             /** Format: date-time */
-            createDate?: string;
+            createDate: string;
             /** Format: date-time */
-            modifyDate?: string;
-            name?: string;
-            username?: string;
+            modifyDate: string;
+            name: string;
+            username: string;
         };
         AdmPostCountResBody: {
             /** Format: int64 */
